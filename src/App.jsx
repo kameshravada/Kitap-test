@@ -10,6 +10,8 @@ import ElementInteractionDemo from "./Action-Components/ElementInteractionDemo";
 import Scrolling from "./Action-Components/Scrolling";
 import Validation from "./Action-Components/Validation";
 import UtilityActionsDemo from "./Action-Components/UtilityActionsDemo";
+import Api from "./Action-Components/Api";
+import ControlFlow from "./Action-Components/ControlFlow";
 function App() {
   return (
     <div className="">
@@ -29,6 +31,8 @@ function App() {
             <Route path="/scrolling" element={<Scrolling />} />
             <Route path="/validation" element={<Validation />} />
             <Route path="/utility" element={<UtilityActionsDemo />} />
+            <Route path="/api" element={<Api />} />
+            <Route path="/control-flow" element={<ControlFlow />} />
           </Routes>
         </BrowserRouter>
       </MantineProvider>

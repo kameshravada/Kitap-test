@@ -32,8 +32,16 @@ const CardData = [
     link: "/validation",
   },
   {
-    testName: "Utility/Data actions",
+    testName: "Utility/Data Actions",
     link: "/utility",
+  },
+  {
+    testName: "API Actions",
+    link: "/api",
+  },
+  {
+    testName: "Control Flow Actions",
+    link: "/control-flow",
   },
 ];
 

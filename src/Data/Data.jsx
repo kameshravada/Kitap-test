@@ -35,6 +35,10 @@ const CardData = [
     testName: "Utility/Data actions",
     link: "/utility",
   },
+  {
+    testName: "API Testing",
+    link: "/api",
+  },
 ];
 
 const AlertData = {

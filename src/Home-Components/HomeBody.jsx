@@ -12,6 +12,8 @@ import {
   ScrollNavigationData,
   UtilityData,
   ValidationData,
+  ControlFlowData,
+  APIData,
 } from "../Data/Data1";
 
 const HomeBody = () => {
@@ -25,6 +27,8 @@ const HomeBody = () => {
     ScrollNavigationData,
     ValidationData,
     UtilityData,
+    APIData,
+    ControlFlowData,
   ];
 
   const totalActions = categories.reduce(
@@ -54,7 +58,7 @@ const HomeBody = () => {
         </div> */}
         <div className=" min-h-50 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-6 gap-6 md:gap-6 2xl:grid-cols-5 grid-flow-row ">
           {CardData.map((card, index) => (
-            <CardComponent card={card} />
+            <CardComponent card={card} key={index} />
           ))}
         </div>
       </div>
