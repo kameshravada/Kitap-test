@@ -12,7 +12,7 @@ import {
   ScrollNavigationData,
   UtilityData,
   ValidationData,
-} from "../Data/Data";
+} from "../Data/Data1";
 
 const HomeBody = () => {
   const categories = [

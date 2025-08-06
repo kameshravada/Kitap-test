@@ -1,7 +1,7 @@
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { KeyboardData } from "../Data/Data";
+import { KeyboardData } from "../Data/Data1";
 
 const KeyboardTestPage = () => {
   const [lastKey, setLastKey] = useState("");

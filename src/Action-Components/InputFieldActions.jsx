@@ -1,7 +1,7 @@
 import { IconArrowNarrowLeft, IconCalendar } from "@tabler/icons-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { InputData } from "../Data/Data";
+import { InputData } from "../Data/Data1";
 import { FileInput } from "@mantine/core";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";

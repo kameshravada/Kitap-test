@@ -1,7 +1,7 @@
 import { IconArrowDown, IconArrowDownToArc, IconArrowNarrowLeft, IconArrowUp } from "@tabler/icons-react";
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ScrollNavigationData } from "../Data/Data";
+import { ScrollNavigationData } from "../Data/Data1";
 
 const Scrolling=()=> {
   const elementRef = useRef(null);

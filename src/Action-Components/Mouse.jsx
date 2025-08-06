@@ -1,7 +1,7 @@
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { MouseData } from "../Data/Data";
+import { MouseData } from "../Data/Data1";
 
 const Mouse = () => {
   const [hovered, setHovered] = useState(false);

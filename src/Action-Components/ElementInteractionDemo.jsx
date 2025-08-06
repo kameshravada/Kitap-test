@@ -1,7 +1,7 @@
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { ElementInteractionData, MouseData } from "../Data/Data";
+import { ElementInteractionData, MouseData } from "../Data/Data1";
 import ElementInteractionDemo2 from "./ElementInteractionDemo2";
 
 export default function ElementInteractionDemo() {

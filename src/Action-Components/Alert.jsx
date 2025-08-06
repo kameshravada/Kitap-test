@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AlertData } from "../Data/Data";
+import { AlertData } from "../Data/Data1";
 import {IconArrowNarrowLeft} from "@tabler/icons-react"
 import { Link } from "react-router-dom";
 

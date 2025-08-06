@@ -37,44 +37,38 @@ const CardData = [
   },
 ];
 
+// ---------- Alert Box ----------
 const AlertData = {
-  category: "Alert Box Steps : ",
+  category: "Alert Box Actions",
   steps: [
     {
-      name: "Alert Box - Accept",
+      name: "Alert Box: Accept",
       description: "Clicks the OK button on an alert message.",
     },
     {
-      name: "Alert Box - Dismiss",
+      name: "Alert Box: Dismiss",
       description: "Clicks the Cancel button on a confirmation message.",
     },
     {
-      name: "Alert Box - Enter Text",
+      name: "Alert Box: Enter Text",
       description: "Types a value into a prompt message and confirms it.",
     },
     {
-      name: "Alert Box - Extract Text and Store",
+      name: "Alert Box: Extract text and Store in Variable",
       description:
         "Reads the message from an alert and saves it for later use.",
     },
     {
-      name: "Alert Box - Extract Text and Verify",
+      name: "Alert Box: Extract text and Verify with input data",
       description: "Checks if the alert message matches a given value.",
     },
   ],
 };
 
+// ---------- Browser ----------
 const BrowserData = {
   category: "Browser Actions",
   steps: [
-    {
-      name: "Browser: Open",
-      description: "Opens a new browser window for testing.",
-    },
-    {
-      name: "Browser: Close Window",
-      description: "Closes the currently active browser window.",
-    },
     {
       name: "Browser: Close All Windows",
       description: "Closes all open browser windows.",
@@ -84,8 +78,16 @@ const BrowserData = {
       description: "Closes a specific tab inside the current browser window.",
     },
     {
+      name: "Browser: Close Window",
+      description: "Closes the currently active browser window.",
+    },
+    {
       name: "Browser: Create New Tab and Navigate",
       description: "Opens a new tab and navigates to a given URL.",
+    },
+    {
+      name: "Browser: Open",
+      description: "Opens a new browser window for testing.",
     },
     {
       name: "Browser: Set Window Size",
@@ -96,11 +98,41 @@ const BrowserData = {
       name: "Browser: Switch",
       description: "Switches control to another open browser window or tab.",
     },
+    {
+      name: "Navigate to a Url",
+      description: "Navigates the current browser window to the specified URL.",
+    },
+    {
+      name: "Refresh page",
+      description: "Refreshes the current web page to reload its content.",
+    },
+    {
+      name: "Switch Between Tabs with Page Title",
+      description: "Switches to a browser tab based on its exact page title.",
+    },
+    {
+      name: "Switch Between Tabs with Page Title Contains",
+      description:
+        "Switches to a browser tab whose title contains the specified text.",
+    },
+    {
+      name: "Switch Between Tabs with Step Sequence Number",
+      description: "Switches to a browser tab based on its sequence number.",
+    },
+    {
+      name: "Switch To Android Native",
+      description: "Switches context to a native Android application.",
+    },
+    {
+      name: "Switch To IOS Native",
+      description: "Switches context to a native iOS application.",
+    },
   ],
 };
 
+// ---------- Keyboard ----------
 const KeyboardData = {
-  category: "Keyboard Actions :",
+  category: "Keyboard Actions",
   steps: [
     {
       name: "KeyBoard Action",
@@ -176,7 +208,7 @@ const KeyboardData = {
       description: "Simulates pressing the Enter key to confirm or submit.",
     },
     {
-      name: 'Keyboard: Press "Esc (Escape)" Key',
+      name: 'Keyboard: Press "Esc(Escape)" Key',
       description: "Simulates pressing the Escape key to cancel or close.",
     },
     {
@@ -193,11 +225,11 @@ const KeyboardData = {
       description: "Simulates pressing the Left Arrow key for navigation.",
     },
     {
-      name: 'Keyboard: Press "PgDn (PageDown)" Key',
+      name: 'Keyboard: Press "PgDn(PageDown)" Key',
       description: "Simulates pressing the Page Down key to scroll down.",
     },
     {
-      name: 'Keyboard: Press "PgUp (PageUp)" Key',
+      name: 'Keyboard: Press "PgUp(PageUp)" Key',
       description: "Simulates pressing the Page Up key to scroll up.",
     },
     {
@@ -234,119 +266,121 @@ const KeyboardData = {
   ],
 };
 
+// ---------- Mouse ----------
 const MouseData = {
-  category: "Mouse Actions :",
+  category: "Mouse Actions",
   steps: [
     {
-      name: "Mouse: Hover over Element",
-      description:
-        "Moves the mouse pointer over a specific element without clicking, often to reveal tooltips, popups, or hidden menus.",
-    },
-    {
-      name: "Mouse: Long Click or Press on Element",
-      description:
-        "Simulates a long mouse press on an element, often used to trigger context menus or mobile touch events.",
-    },
-    {
-      name: "Mouse: Click and Hold on Element",
-      description:
-        "Clicks and holds the mouse button on the center of a specific element. Useful for drag-and-drop scenarios.",
-    },
-    {
-      name: "Mouse: Click And Hold at Co-Ordinates relative to Element",
-      description:
-        "Clicks and holds the mouse button at specified (X, Y) coordinates within the element boundary.",
-    },
-    {
-      name: "Mouse: Move Pointer to Element and Hover",
-      description:
-        "Moves the pointer to a target element and keeps it there, simulating a hover state for testing UI effects.",
-    },
-    {
-      name: "Mouse: Move at Co-Ordinates relative to Element",
-      description:
-        "Moves the mouse to a given X and Y offset inside the element without clicking or holding.",
-    },
-    {
-      name: "Mouse: Move Away From Element",
-      description:
-        "Moves the mouse pointer away from the hovered element, simulating user moving out of a hover zone.",
-    },
-    {
-      name: "Mouse: Release Click",
-      description:
-        "Releases the previously held-down mouse button. This is typically used in combination with hold actions.",
-    },
-    {
-      name: "Mouse: Double Click on an Element",
+      name: "Double Click on an Element",
       description:
         "Simulates a double-click on the specified element, often used for editing or activating items.",
     },
     {
-      name: "Mouse: Right Click",
+      name: "Long Click or Press on Element",
       description:
-        "Performs a right-click (context click) on an element to open context menus or trigger alternate actions.",
+        "Simulates a long mouse press on an element, often used to trigger context menus.",
+    },
+    {
+      name: "Mouse Hover over Element",
+      description:
+        "Moves the mouse pointer over a specific element without clicking, often to reveal tooltips or hidden menus.",
+    },
+    {
+      name: "Mouse: Click And Hold at Co-Ordinates relative to Element",
+      description:
+        "Clicks and holds the mouse button at specified coordinates within the element boundary.",
+    },
+    {
+      name: "Mouse: Click and Hold on Element",
+      description:
+        "Clicks and holds the mouse button on the center of a specific element for drag-and-drop operations.",
+    },
+    {
+      name: "Mouse: Move Away From Element",
+      description: "Moves the mouse pointer away from the hovered element.",
+    },
+    {
+      name: "Mouse: Move Pointer to Element and Hover",
+      description:
+        "Moves the pointer to a target element and keeps it there, simulating a hover state.",
+    },
+    {
+      name: "Mouse: Move at Co-Ordinates relative to Element",
+      description:
+        "Moves the mouse to a given X and Y offset inside the element without clicking.",
+    },
+    {
+      name: "Mouse: Release Click",
+      description:
+        "Releases the previously held-down mouse button, typically used with hold actions.",
+    },
+    {
+      name: "Right Click",
+      description:
+        "Performs a right-click (context click) on an element to open context menus.",
     },
   ],
 };
 
+// ---------- Input / Form ----------
 const InputData = {
-  category: "Input Field Actions :",
+  category: "Input Field Actions",
   steps: [
     {
-      name: "Input - Enter Text",
-      description:
-        "Types new content into an input field, replacing any existing text.",
-    },
-    {
-      name: "Input - Clear Text",
-      description:
-        "Clears any existing text from a specific input field so that it becomes empty.",
-    },
-    {
-      name: "Input - Check Checkbox",
+      name: "Check the Checkbox",
       description:
         "Checks a checkbox to simulate a user enabling a specific option.",
     },
     {
-      name: "Input - Click Radio Button",
+      name: "Clear Text from input field",
+      description:
+        "Clears any existing text from a specific input field so that it becomes empty.",
+    },
+    {
+      name: "Click Radio Button",
       description: "Selects a specific radio button from a group of choices.",
     },
     {
-      name: "Input - Select from Drop Down By Index",
+      name: "Enter text into a field",
       description:
-        "Chooses an option from a dropdown list based on its position (e.g., first, second).",
+        "Types new content into an input field, replacing any existing text.",
     },
     {
-      name: "Input - Select from Drop Down by Option",
-      description:
-        "Chooses a specific option in the dropdown based on its displayed text.",
-    },
-    {
-      name: "Input - Paste Clipboard Content",
+      name: "Paste Clipboard Content",
       description:
         "Simulates pasting content from the clipboard into an input field.",
     },
     {
-      name: "Input - Toggle Switch",
+      name: "Select from Drop Down By Index",
+      description:
+        "Chooses an option from a dropdown list based on its position (e.g., first, second).",
+    },
+    {
+      name: "Select from Drop Down by Option",
+      description:
+        "Chooses a specific option in the dropdown based on its displayed text.",
+    },
+    {
+      name: "Toggle Switch",
       description:
         "Toggles a switch input (on/off) to simulate enabling or disabling a feature.",
     },
     {
-      name: "Input - Upload a File",
+      name: "Upload a File",
       description:
         "Uploads a file using a file input field, simulating user file selection.",
     },
   ],
 };
 
+// ---------- Element Interaction ----------
 const ElementInteractionData = {
   category: "Element Interaction Actions",
   steps: [
     {
       name: "Click on an Element",
       description:
-        "Simulates a regular left-click on any interactive HTML element (like a button or link).",
+        "Simulates a regular left-click on any interactive HTML element.",
     },
     {
       name: "Click to Download file",
@@ -366,7 +400,7 @@ const ElementInteractionData = {
     {
       name: "Extract Text from Element Attribute and Store in Variable",
       description:
-        "Reads the value of a specified attribute (like `href`, `title`, `value`) from an element and saves it to a variable.",
+        "Reads the value of a specified attribute from an element and saves it to a variable.",
     },
     {
       name: "Extract Text from Element and Store in Variable",
@@ -381,23 +415,14 @@ const ElementInteractionData = {
     {
       name: "Store input value in the variable if no value is currently stored",
       description:
-        "If the target variable is empty or undefined, this step assigns it a value from a form input.",
-    },
-    {
-      name: "Set focus on an Element",
-      description:
-        "Brings keyboard or interaction focus to a specific element like a text box or button.",
-    },
-    {
-      name: "Scroll to element",
-      description:
-        "Smoothly scrolls the page to bring the specified element into the viewport.",
+        "If the target variable is empty, this step assigns it a value from a form input.",
     },
   ],
 };
 
+// ---------- Scrolling / Navigation ----------
 const ScrollNavigationData = {
-  category: "Scrolling & Navigation Actions :",
+  category: "Scrolling & Navigation Actions",
   steps: [
     {
       name: "Scroll To the End",
@@ -413,25 +438,26 @@ const ScrollNavigationData = {
         "Scrolls down the page by a specific number of pixels from the current position.",
     },
     {
-      name: "Scroll up by Pixel",
-      description:
-        "Scrolls up the page by a specific number of pixels from the current position.",
-    },
-    {
       name: "Scroll to Percent of page height",
       description:
-        "Scrolls the page to a percentage of its full height (e.g., 50% down).",
+        "Scrolls the page to a percentage of its full height (e.g., 50 % down).",
     },
     {
       name: "Scroll to element",
       description:
         "Scrolls the view until a specific element becomes visible in the viewport.",
     },
+    {
+      name: "Scroll up by Pixel",
+      description:
+        "Scrolls up the page by a specific number of pixels from the current position.",
+    },
   ],
 };
 
+// ---------- Validation / Verification ----------
 const ValidationData = {
-  category: "Validation/Verification :",
+  category: "Validation/Verification Actions",
   steps: [
     {
       name: "Check displayed text matches expected",
@@ -451,6 +477,11 @@ const ValidationData = {
     {
       name: "Verify Ends with",
       description: "Checks if the element’s text ends with a particular value.",
+    },
+    {
+      name: "Verify Execution Time (milliseconds)",
+      description:
+        "Measures and validates the execution time of an action in milliseconds.",
     },
     {
       name: "Verify Fields",
@@ -473,6 +504,11 @@ const ValidationData = {
         "Verifies whether a checkbox, radio button, or select option is selected.",
     },
     {
+      name: "Verify Numeric Range",
+      description:
+        "Validates that a numeric value falls within a specified range.",
+    },
+    {
       name: "Verify Starts with",
       description: "Checks if the element’s text starts with a given prefix.",
     },
@@ -482,8 +518,31 @@ const ValidationData = {
         "Asserts that a stored or default variable contains some value.",
     },
     {
+      name: "Verify Stored variable or default temp variable value: ends with",
+      description:
+        "Checks if a stored variable's value ends with a specific text.",
+    },
+    {
+      name: "Verify Stored variable or default temp variable value: equals",
+      description:
+        "Checks if a stored variable's value exactly matches a given value.",
+    },
+    {
+      name: "Verify Stored variable or default temp variable value: starts with",
+      description:
+        "Checks if a stored variable's value starts with a specific text.",
+    },
+    {
       name: "Verify Text Empty",
       description: "Checks whether the visible text of an element is empty.",
+    },
+    {
+      name: "Verify Text From Table",
+      description: "Validates text content within a table structure.",
+    },
+    {
+      name: "Verify Text List",
+      description: "Validates text content within a list structure.",
     },
     {
       name: "Verify Text Not Empty",
@@ -501,7 +560,7 @@ const ValidationData = {
     {
       name: "Verify: Attribute Value Contains",
       description:
-        "Checks whether an element’s attribute contains a specific substring.",
+        "Checks whether an element's attribute contains a specific substring.",
     },
     {
       name: "Verify: Attribute Value Is Empty",
@@ -509,12 +568,16 @@ const ValidationData = {
     },
     {
       name: "Verify: Attribute Value Is Not Empty",
-      description: "Asserts that an element’s attribute has some value.",
+      description: "Asserts that an element's attribute has some value.",
     },
     {
       name: "Verify: Element Text Match",
       description:
         "Confirms the full text content of an element matches a given string.",
+    },
+    {
+      name: "Verify: Element text length",
+      description: "Checks the number of characters in the text of an element.",
     },
     {
       name: "Verify: Is Element Displayed",
@@ -525,34 +588,17 @@ const ValidationData = {
       description:
         "Checks that the element is not visible or is hidden from view.",
     },
-    {
-      name: "Verify: Element text length",
-      description: "Checks the number of characters in the text of an element.",
-    },
   ],
 };
 
+// ---------- Utility / Data ----------
 const UtilityData = {
-  category: "Utility/Data Actions :",
+  category: "Utility/Data Actions",
   steps: [
-    {
-      name: "Pause Execution in seconds",
-      description:
-        "Waits (pauses) for a specified time before continuing the test.",
-    },
-    {
-      name: "Replace sequence of characters in Stored variable: replace",
-      description:
-        "Replaces specific characters or substrings in a stored variable.",
-    },
-    {
-      name: "Remove first n characters from variable or default temp variable",
-      description: "Removes the initial characters from a variable's value.",
-    },
     {
       name: "Arithmetic: Addition on Stored variable or default temp variable value with input",
       description:
-        "Adds a number to a stored variable or default `temp` variable.",
+        "Adds a number to a stored variable or default temp variable.",
     },
     {
       name: "Arithmetic: Division on Stored variable or default temp variable value by input",
@@ -567,7 +613,54 @@ const UtilityData = {
       description: "Subtracts the input number from the variable.",
     },
     {
-      name: "Visual AI to compare baseline application UI with runtime UI",
+      name: "Compares stored variable with input integer number: compare",
+      description:
+        "Compares a stored variable's numeric value with an input integer.",
+    },
+    {
+      name: "Convert List of Strings As Multiline Text and copy to clipboard",
+      description:
+        "Formats a list as multiline text and copies it to the clipboard.",
+    },
+    {
+      name: "Extract data from PDF",
+      description: "Reads and extracts data from a PDF file.",
+    },
+    {
+      name: "Extract first Number from a Text",
+      description: "Finds and stores the first number found in a text string.",
+    },
+    {
+      name: "Get Current URL and Store in Variable",
+      description:
+        "Retrieves the current page URL and stores it in a variable.",
+    },
+    {
+      name: "Pause Execution in seconds",
+      description:
+        "Waits (pauses) for a specified time before continuing the test.",
+    },
+    {
+      name: "Remove first n characters from variable or default temp variable",
+      description: "Removes the initial characters from a variable's value.",
+    },
+    {
+      name: "Replace sequence of characters in Stored variable: replace",
+      description:
+        "Replaces specific characters or substrings in a stored variable.",
+    },
+    {
+      name: "Run Script",
+      description:
+        "Executes a custom script or code snippet during test execution.",
+    },
+    {
+      name: "Validate and update data in excel file",
+      description:
+        "Reads, validates and updates Excel file contents during execution.",
+    },
+    {
+      name: "Visual AI to compare baseline application UI with runtime UI.",
       description:
         "Uses AI to compare the live app UI with a stored baseline for visual differences.",
     },
@@ -600,23 +693,34 @@ const UtilityData = {
       description:
         "Detects sections (zones) of the page for organized interaction.",
     },
+  ],
+};
+
+// ---------- API ----------
+const APIData = {
+  category: "API Actions",
+  steps: [
     {
-      name: "Convert List of Strings As Multiline Text and copy to clipboard",
+      name: "Call an API",
       description:
-        "Formats a list as multiline text and copies it to the clipboard.",
+        "Makes an API call to retrieve or send data during test execution.",
     },
+  ],
+};
+
+// ---------- Control Flow ----------
+const ControlFlowData = {
+  category: "Control Flow Actions",
+  steps: [
     {
-      name: "Validate and update data in excel file",
+      name: "If False Block",
       description:
-        "Reads, validates, and updates Excel file contents during execution.",
+        "Executes a block of actions only if a specified condition is false.",
     },
     {
-      name: "Extract data from PDF",
-      description: "Reads and extracts data from a PDF file.",
-    },
-    {
-      name: "Extract first Number from a Text",
-      description: "Finds and stores the first number found in a text string.",
+      name: "If True Block",
+      description:
+        "Executes a block of actions only if a specified condition is true.",
     },
   ],
 };
@@ -632,4 +736,6 @@ export {
   ScrollNavigationData,
   ValidationData,
   UtilityData,
+  APIData,
+  ControlFlowData,
 };

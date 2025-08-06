@@ -1,5 +1,5 @@
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
-import { AlertData, BrowserData } from "../Data/Data";
+import { AlertData, BrowserData } from "../Data/Data1";
 import { Link } from "react-router-dom";
 
 const Browser = () => {

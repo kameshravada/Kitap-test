@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
-import { ValidationData } from "../Data/Data";
+import { ValidationData } from "../Data/Data1";
 
 const Validation = () => {
   return (
