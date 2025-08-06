@@ -53,7 +53,7 @@ const KeyboardTestPage = () => {
             {/* Last Key Pressed */}
             <div className="bg-blue-500 text-white px-4 py-2 rounded shadow mb-4 w-fit gap-4 text-center flex justify-around">
               <strong>Key Pressed :</strong>
-              <div className="text-black font-semibold">
+              <div className="text-yellow-300 font-semibold">
                 {" "}
                 {lastKey || "None"}
               </div>
