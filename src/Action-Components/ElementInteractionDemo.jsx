@@ -33,7 +33,7 @@ export default function ElementInteractionDemo() {
 
           <div className="text-white flex gap-4 items-center">
             <div className=" gap-5 sm:flex  items-center text-sm sm:text-base text-white">
-              <div className="flex flex-col sm:flex-row gap-4 mt-2 ">
+              <div className="flex flex-col sm:flex-row gap-4 mt-2 items-center">
                 <div className="flex ">demo :</div>
                 <button
                   onClick={() => alert("Element Clicked")}
