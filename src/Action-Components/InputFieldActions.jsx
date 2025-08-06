@@ -10,7 +10,7 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function InputFieldActions() {
   const [inputValue, setInputValue] = useState("Sample input");
   const [checkbox, setCheckbox] = useState(false);
-  const [radio, setRadio] = useState("option1");
+  const [radio, setRadio] = useState("");
   const [dropdown, setDropdown] = useState("");
   const [toggle, setToggle] = useState(false);
   const [fileName, setFileName] = useState(false);
