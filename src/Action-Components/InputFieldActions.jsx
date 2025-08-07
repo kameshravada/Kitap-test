@@ -109,6 +109,7 @@ export default function InputFieldActions() {
                 <div className="">
                   <input
                     name="checkbox"
+                    id="checkbox"
                     type="checkbox"
                     checked={checkbox}
                     onChange={() => setCheckbox(!checkbox)}
