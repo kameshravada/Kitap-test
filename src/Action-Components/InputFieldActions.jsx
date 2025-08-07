@@ -6,7 +6,6 @@ import { FileInput } from "@mantine/core";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-
 export default function InputFieldActions() {
   const [inputValue, setInputValue] = useState("Sample input");
   const [checkbox, setCheckbox] = useState(false);
@@ -15,9 +14,7 @@ export default function InputFieldActions() {
   const [toggle, setToggle] = useState(false);
   const [fileName, setFileName] = useState(false);
 
-  const [dateValue,setDateValue] = useState();
-
-
+  const [dateValue, setDateValue] = useState();
 
   const handleClear = () => setInputValue("");
   const handleEnter = () => setInputValue("Hello from Enter Text");
@@ -111,12 +108,15 @@ export default function InputFieldActions() {
                 <label className="block font-medium mb-1">Checkbox :</label>
                 <div className="">
                   <input
+                    name="checkbox"
                     type="checkbox"
                     checked={checkbox}
                     onChange={() => setCheckbox(!checkbox)}
                     className="mr-2 cursor-pointer"
                   />
-                  {checkbox ? "Uncheck" : "Check"}
+                  <label htmlFor="checkbox" className="cursor-pointer">
+                    {checkbox ? "Uncheck" : "Check"}
+                  </label>
                 </div>
               </div>
             </div>
@@ -215,7 +215,7 @@ export default function InputFieldActions() {
               </div>
               <div className="">
                 <DatePicker
-                showIcon
+                  showIcon
                   label="Pick a date"
                   selected={dateValue}
                   onChange={(date) => {
@@ -226,13 +226,9 @@ export default function InputFieldActions() {
                   dateFormat={"dd/MM/yyyy"}
                   minDate={"07/28/2025"}
                   maxDate={new Date()}
-                  icon={
-                    <IconCalendar className=""/>
-                  }
-                  
+                  icon={<IconCalendar className="" />}
                 />
               </div>
-              
             </div>
           </div>
         </div>
