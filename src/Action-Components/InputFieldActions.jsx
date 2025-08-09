@@ -225,7 +225,7 @@ export default function InputFieldActions() {
                   className="border border-white rounded-md items-center"
                   placeholderText="dd/mm/yyyy"
                   dateFormat={"dd/MM/yyyy"}
-                  minDate={"07/28/2025"}
+                  //minDate={"07/28/2025"}
                   maxDate={new Date()}
                   icon={<IconCalendar className="" />}
                 />
