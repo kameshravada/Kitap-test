@@ -1,6 +1,6 @@
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ElementInteractionData, MouseData } from "../Data/Data1";
 import ElementInteractionDemo2 from "./ElementInteractionDemo2";
 
@@ -16,6 +16,18 @@ export default function ElementInteractionDemo() {
   const scrollToTarget = () => {
     scrollTargetRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Backspace") {
+        navigate(-1);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
 
   return (
     <div className="">

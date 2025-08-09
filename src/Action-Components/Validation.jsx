@@ -1,9 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
 import { ValidationData } from "../Data/Data1";
 
 const Validation = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Backspace") {
+        navigate(-1);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
+
   return (
     <div className="">
       <div className="flex flex-col ">
@@ -21,7 +34,7 @@ const Validation = () => {
             <div className="relative overflow-x-auto shadow-lg sm:rounded-lg bg-black/15 max-w-7xl">
               <table className="w-full text-sm text-left rtl:text-right text-gray-500  ">
                 <thead className="text-xs text-gray-200 uppercase ">
-                  <tr>
+                  <tr className="border-b border-gray-700">
                     <th
                       scope="col"
                       className="px-6 py-3  bg-gray-800" //bg-gray-50

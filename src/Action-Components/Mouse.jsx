@@ -1,6 +1,6 @@
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { MouseData } from "../Data/Data1";
 
 const Mouse = () => {
@@ -39,6 +39,18 @@ const Mouse = () => {
     }
   };
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Backspace") {
+        navigate(-1);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
+
   return (
     <div className="">
       <div className="flex flex-col ">
@@ -53,9 +65,8 @@ const Mouse = () => {
 
           <div className="text-white flex gap-4 items-center">
             <div className=" gap-5 sm:flex  items-center text-sm sm:text-base text-white">
-                            <div className="flex flex-wrap gap-4 mt-2 items-center">
-
-              <div className="flex">demo :</div>
+              <div className="flex flex-wrap gap-4 mt-2 items-center">
+                <div className="flex">demo :</div>
                 <button
                   onDoubleClick={() => alert("Element Double-Clicked")}
                   className="bg-yellow-500/75 hover:bg-yellow-600 cursor-pointer text-white py-1 md:py-2 px-2 md:px-4 rounded "

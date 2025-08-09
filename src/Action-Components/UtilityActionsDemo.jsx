@@ -1,11 +1,23 @@
 import { IconArrowNarrowLeft } from "@tabler/icons-react";
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UtilityData } from "../Data/Data1";
 import UtilityActionsDemo2 from "./UtilityActionsDemo2";
 
 const UtilityActionsDemo = () => {
 
+  
+const navigate = useNavigate();
+
+useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.key === "Backspace") {
+      navigate(-1);
+    }
+  };
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+}, [navigate]);
 
   return (
     <div className="">

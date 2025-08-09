@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function FormInputActionsDemo() {
   const [text, setText] = useState("Sample Text");
@@ -7,6 +8,18 @@ export default function FormInputActionsDemo() {
   const [dropdown, setDropdown] = useState("Option 1");
   const [toggle, setToggle] = useState(false);
   const [fileName, setFileName] = useState("");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Backspace") {
+        navigate(-1);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
 
   return (
     <div className="p-6 max-w-2xl mx-auto space-y-6 bg-white rounded-xl shadow-md">

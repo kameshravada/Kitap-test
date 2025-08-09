@@ -1,6 +1,6 @@
 import { IconArrowNarrowLeft, IconCalendar } from "@tabler/icons-react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { InputData } from "../Data/Data1";
 import { FileInput } from "@mantine/core";
 import DatePicker from "react-datepicker";
@@ -41,6 +41,18 @@ export default function InputFieldActions() {
       alert("Clipboard access denied. Try using HTTPS and user interaction.");
     }
   };
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Backspace") {
+        navigate(-1);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
 
   return (
     <div className="">

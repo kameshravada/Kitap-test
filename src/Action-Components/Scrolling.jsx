@@ -1,9 +1,14 @@
-import { IconArrowDown, IconArrowDownToArc, IconArrowNarrowLeft, IconArrowUp } from "@tabler/icons-react";
+import {
+  IconArrowDown,
+  IconArrowDownToArc,
+  IconArrowNarrowLeft,
+  IconArrowUp,
+} from "@tabler/icons-react";
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ScrollNavigationData } from "../Data/Data1";
 
-const Scrolling=()=> {
+const Scrolling = () => {
   const elementRef = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -20,6 +25,18 @@ const Scrolling=()=> {
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Backspace") {
+        navigate(-1);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
 
   const scrollToEnd = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
@@ -139,6 +156,6 @@ const Scrolling=()=> {
       </div>
     </div>
   );
-}
+};
 
-export default Scrolling
+export default Scrolling;

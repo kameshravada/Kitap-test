@@ -1,5 +1,5 @@
 import { IconExternalLink } from "@tabler/icons-react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const CardComponent = ({ card }) => {
@@ -7,6 +7,17 @@ const CardComponent = ({ card }) => {
   const onClickCard = () => {
     navigate(`${card.link}`);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Backspace") {
+        navigate(-1);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [navigate]);
+
   return (
     <div className="  p-2 bg-gradient-to-r from-[#8d3dc1]/20  to-[#6daaf0]/20 rounded-2xl flex flex-col gap-6 justify-center items-center min-w-[45] h-39 2xl:h-56 2xl:gap-10 flex-wrap">
       <div className="flex justify-center  text-sm lg:text-lg  font-semibold text-black/70">
