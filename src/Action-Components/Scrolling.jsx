@@ -93,10 +93,10 @@ const Scrolling=()=> {
                   Scroll Up by 200px
                 </button> */}
                 <button
-                  onClick={() => scrollToPercent(0.5)}
+                  onClick={() => scrollToPercent(0.2)}
                   className="bg-teal-600/75 hover:bg-teal-600 cursor-pointer text-white py-1 md:py-2 px-2 md:px-4 rounded"
                 >
-                  Scroll to 50% of Page
+                  Scroll to 20% of Page
                 </button>
                 <button
                   onClick={scrollToElement}
